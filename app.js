@@ -1,3 +1,4 @@
+gsap.registerPlugin(ScrollTrigger);
 //ball mouse follow
 gsap.set(".ball", { xPercent: -50, yPercent: -50 });
 
@@ -25,26 +26,99 @@ gsap.ticker.add(() => {
 });
 
 //Record Player Spinning
+
+
+
+
+
+
 const record = gsap.timeline({
   scrollTrigger: {
     trigger: ".hero",
     start: "top 5%",
-    scrub: 5,
+    scrub: 3,
     // markers: true,
   },
 });
+record.from(".front-dummy", 20, { rotation: "-360" });
+// gsap.to(".front-dummy", 15, { rotation: "360", ease: Linear.easeNone });
 
-record.from(".front-dummy", { rotation: -360 });
 
-//Chosen By : Nicole Brodkin
-const choseName = gsap.timeline({
+
+
+
+//quote reveal
+gsap.to(".quote span", {
+  backgroundPositionX: "0%",
+  stagger: .3,
   scrollTrigger: {
-    trigger: ".chose",
-    start: "top 50%",
-    end: "bottom 50%",
+    trigger: ".quote",
+    // markers: true,
     scrub: 5,
-    markers: true,
+    start: "top center",
+    end: "bottom 80%",
   },
 });
 
-choseName.from(".mention", { duration: 5.5, ease: "bounce.out", y: -200 });
+
+
+// background change color
+const colorChange = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".track-title",
+    scrub: true,
+    // markers: true,
+    start: "top center",
+    end: "bottom center",
+  }
+});
+
+colorChange.to(".color", {
+  backgroundColor: "#82abff",
+  color: "#002060",
+});
+
+colorChange.to(".main-title", {
+  color: "#002060"
+})
+colorChange.to(".notes a", {
+  color: "#002060",
+});
+
+
+//image reveal on for album song list
+
+const songName = document.querySelectorAll(".song-name");
+const image = document.querySelector(".test");
+
+songName.forEach((el) => {
+  el.addEventListener("mouseover", (e) => {
+    imageData = e.target.getAttribute("data-image");
+    console.log(imageData);
+    // e.target.style.zIndex = 99;
+    image.setAttribute("src", imageData);
+  });
+  el.addEventListener("mousemove", (e) => {
+    image.style.top = e.clientY + "px";
+    image.style.left = e.clientX + "px";
+  });
+  el.addEventListener("mouseleave", (e) => {
+    e.target.style.zIndex = 1;
+    image.setAttribute("src", "");
+  });
+});
+
+// //listen to album
+// const choseName = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".album-listen",
+//     start: "top 50%",
+//     end: "bottom 50%",
+//     scrub: 8,
+//     // markers: true,
+//   },
+// });
+// choseName.from(".album-listen h2", { duration: .5, ease: "expo.out", y: -200 });
+
+
+
