@@ -75,7 +75,7 @@ colorChange.to(".color", {
 colorChange.to(".main-title", {
   color: "#002060"
 })
-colorChange.to(".notes a", {
+colorChange.to(".lyrics a", {
   color: "#002060",
 });
 
@@ -92,8 +92,6 @@ const image = document.querySelector(".test");
 songName.forEach((el) => {
   el.addEventListener("mouseover", (e) => {
     imageData = e.target.getAttribute("data-image");
-    console.log(imageData);
-    // e.target.style.zIndex = 99;
     image.setAttribute("src", imageData);
   });
   el.addEventListener("mousemove", (e) => {
