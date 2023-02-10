@@ -26,12 +26,6 @@ gsap.ticker.add(() => {
 });
 
 //Record Player Spinning
-
-
-
-
-
-
 const record = gsap.timeline({
   scrollTrigger: {
     trigger: ".hero",
@@ -50,13 +44,13 @@ record.from(".front-dummy", 20, { rotation: "-360" });
 //quote reveal
 gsap.to(".quote span", {
   backgroundPositionX: "0%",
-  stagger: .3,
+  stagger: .2,
   scrollTrigger: {
     trigger: ".quote",
     // markers: true,
     scrub: 5,
-    start: "top center",
-    end: "bottom 80%",
+    start: "top 50%",
+    end: "bottom center",
   },
 });
 
@@ -85,6 +79,10 @@ colorChange.to(".notes a", {
   color: "#002060",
 });
 
+colorChange.to(".ball", {
+  border: "3px solid var(--dark-color)"
+})
+
 
 //image reveal on for album song list
 
@@ -104,21 +102,21 @@ songName.forEach((el) => {
   });
   el.addEventListener("mouseleave", (e) => {
     e.target.style.zIndex = 1;
-    image.setAttribute("src", "");
+    image.setAttribute("src", " ");
   });
 });
 
-// //listen to album
-// const choseName = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".album-listen",
-//     start: "top 50%",
-//     end: "bottom 50%",
-//     scrub: 8,
-//     // markers: true,
-//   },
-// });
-// choseName.from(".album-listen h2", { duration: .5, ease: "expo.out", y: -200 });
+//listen to album
+const choseName = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".album-listen",
+    start: "top 50%",
+    end: "bottom 50%",
+    scrub: 3,
+    // markers: true,
+  },
+});
+choseName.from(".album-listen", { duration: .2, ease: "expo.out", x: -500 });
 
 
 

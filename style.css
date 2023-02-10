@@ -1,43 +1,48 @@
+:root {
+  --dark-color: #002060;
+  --light-color: #82abff;
+  --main-font: "obviously", sans-serif;
+  --wide-font: "obviously-wide", sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-
 }
 
 .color {
-  background-color: #002060;
-  width: 100%;
-  color: #82abff;
+  background-color: var(--dark-color);
+  color: var(--light-color);
 }
 
 .ball {
-  width: 50px;
-  height: 50px;
+  border: 3px solid #82abff;
+  border-radius: 50%;
   position: fixed;
   top: 0;
   left: 0;
-  border: 3px solid red;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   pointer-events: none;
   z-index: 10;
 }
 
 nav {
+  color: var(--light-color);
   display: flex;
+  font-family: "obviously-narrow", sans-serif;
+  font-weight: 300;
   justify-content: space-between;
-  position: fixed;
   margin-top: 20px;
   padding: 20px;
+  position: fixed;
   width: 100%;
   z-index: 2;
-  color: #82abff;
-  font-family: "obviously-narrow", sans-serif;
-  font-weight: 900;
-  
 }
 
-.name {
+.name,
+.lyrics a {
   font-size: 25px;
 }
 
@@ -46,9 +51,8 @@ nav {
 }
 
 .lyrics a {
+  color: var(--light-color);
   text-decoration: none;
-  color: #82abff;
-  font-size: 25px;
 }
 
 .audio {
@@ -57,16 +61,17 @@ nav {
   padding-top: 50px;
 }
 
+
+
 .record {
   display: block;
   margin: 0px auto;
   position: fixed;
-  display: flex;
+  padding-top: 100px;
   position: relative;
   top: 50%;
   bottom: 20%;
   left: 20%;
-  padding-top: 100px;
 }
 
 .front-dummy {
@@ -79,52 +84,56 @@ nav {
 }
 
 .mention {
+  font-family: var(--main-font);
   padding-top: 100px;
-  z-index: 4;
   position: relative;
-   font-family: "obviously", sans-serif;
+  z-index: 4;
+}
+
+.chose,
+.nik {
+  font-size: 100px;
 }
 
 .chose {
-  padding-left: 200px;
-  font-size: 100px;
   font-weight: 500;
+  padding-left: 200px;
 }
 
 .nik {
   padding-left: 500px;
-  font-size: 100px;
 }
 
 ul li {
-  list-style: none;
   display: inline;
-  padding-left: 250px;
+  font-family: var(--wide-font);
   font-size: 15px;
-  font-family: "obviously-wide", sans-serif;
+  list-style: none;
+  padding-left: 250px;
 }
 
 hr {
-  width: 1200px;
+  border: 1px solid var(--light-color);
   margin: 0 auto;
-  border: 1px solid #82abff;
+  width: 1200px;
 }
 
 .quote-contain {
   margin: 200px;
+  padding-bottom: 200px;
+}
 
-}
 .stranger {
-  font-size: 18px;
-  color: #82abff;
+  color: var(--light-color);
   display: inline;
-  font-family: "obviously-wide", sans-serif;
+  font-family: var(--wide-font);
+  font-size: 18px;
 }
+
 .quote {
-    font-family: "obviously", sans-serif;
-  font-weight: 200;
+  color: var(--light-color);
+  font-family: var(--main-font);
   font-size: 60px;
-  color: #82abff;
   padding-left: 400px;
 }
 
@@ -140,6 +149,7 @@ hr {
   background-clip: text;
   -webkit-background-clip: text;
 }
+
 .container {
   margin: 0px;
   padding: 20px 0 0px 150px;
@@ -147,18 +157,14 @@ hr {
   width: 100%;
 }
 
-/* .tracks {
-  color: #82abff;
-} */
-
 .track-title {
-  font-family: "obviously-wide", sans-serif;
+  font-family: var(--wide-font);
   font-size: 18px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 .song-name {
-    font-family: "obviously", sans-serif;
+  font-family: var(--main-font);
   padding: 0px 0 8px 0;
   font-size: 35px;
   object-fit: contain;
@@ -172,17 +178,16 @@ hr {
   width: 900px;
 }
 
-
 .album-listen h2 {
-  font-size: 55px;
   color: #002060;
-  padding: 300px 0 500px 100px;
-  font-family: "obviously-wide", sans-serif;
+  font-family: var(--wide-font);
+  font-size: 55px;
+  padding: 300px 0 200px 100px;
 }
-
 
 .album-listen a {
-  text-decoration: none;
   color: #002060;
+  font-weight: 600;
+  text-decoration: none;
+  
 }
-
