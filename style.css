@@ -195,17 +195,17 @@ hr {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
   body {
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 700px;
     overflow-x: hidden;
   }
  .color {
   margin: 0;
   padding: 0;
-  max-width: 400px;
+  max-width: 700px;
  }
 
  .ball{
@@ -221,15 +221,8 @@ hr {
   font-size: 10px;
 }
 
- .audio {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 99%;
-   z-index: 10;
-   margin: 0 auto;
-   display: block;
-   padding: 0;
+ iframe .audio{
+display: none;
  }
 
  
@@ -245,7 +238,7 @@ hr {
  .chose,
 .nik {
   font-size: 30px;
-  margin: 0;
+  margin: 10px;
 }
 
 .chose {
