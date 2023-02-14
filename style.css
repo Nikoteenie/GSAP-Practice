@@ -6,9 +6,10 @@
 }
 
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+
 }
 
 .color {
@@ -37,7 +38,7 @@ nav {
   margin-top: 20px;
   padding: 20px;
   position: fixed;
-  width: 100%;
+ width: 100%;
   z-index: 2;
 }
 
@@ -62,22 +63,24 @@ nav {
 }
 
 .record {
-  display: block;
-  margin: 0px auto;
-  position: fixed;
-  padding-top: 100px;
-  position: relative;
-  top: 50%;
-  bottom: 20%;
-  left: 20%;
+ padding-top: 100px;
 }
 
 .front-dummy {
+
+     display: block;
+  margin: 0px auto;
   z-index: 3;
   position: absolute;
+  left: 20%;
+
+
 }
 
 .back-dummy {
+
+     display: block;
+  margin: 0px auto;
   z-index: 2;
 }
 
@@ -188,4 +191,134 @@ hr {
   font-weight: 600;
   text-decoration: none;
   
+}
+
+
+
+@media (max-width: 400px) {
+
+  body {
+    margin: 0 auto;
+    max-width: 400px;
+    overflow-x: hidden;
+  }
+ .color {
+  margin: 0;
+  padding: 0;
+  max-width: 400px;
+ }
+
+ .ball{
+  display: none;
+ }
+
+.name,
+.lyrics a {
+  font-size: 15px;
+}
+
+.album {
+  font-size: 10px;
+}
+
+ .audio {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 99%;
+   z-index: 10;
+   margin: 0 auto;
+   display: block;
+   padding: 0;
+ }
+
+ 
+ .front-dummy, .back-dummy {
+  margin: 50px auto;
+ width: 300px;
+ }
+
+ .front-dummy{
+  left: 10%;
+ }
+
+ .chose,
+.nik {
+  font-size: 30px;
+  margin: 0;
+}
+
+.chose {
+  font-weight: 500;
+  padding-left: 20px;
+}
+ul {
+  margin: 0;
+}
+
+
+ul li {
+  display: inline;
+  padding-left: 30px;
+  font-size: 10px;
+}
+
+.nik {
+  padding-left: 100px;
+}
+
+hr {
+margin: 0px auto;
+  width: 300px;
+}
+
+.stranger {
+  font-size: 12px;
+}
+.quote {
+  font-size: 30px;
+  padding-left: 80px;
+}
+
+.quote-contain{
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 300px;
+  margin-top: 200px;
+}
+
+.quote > span {
+  background-size: 200% 100%;
+  background-position-x: 50%;
+}
+
+.container {
+ padding-left: 15px;
+}
+
+.track-title {
+
+  font-size: 18px;
+  padding-bottom: 100px;
+}
+
+.song-name {
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.pics {
+  margin: 50px;
+  padding: 0;
+}
+
+.test {
+  width: 500px;
+}
+
+.album-listen h2 {
+  font-size: 30px;
+  padding-left: 80px
+  }
+
 }
