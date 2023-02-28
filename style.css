@@ -193,9 +193,28 @@ hr {
   
 }
 
+footer {
+  padding: 20px;
+  text-align: right;
+  color: var(--dark-color);
+ font-family: var(--main-font);
+}
+
+footer a {
+  text-decoration: none;
+  color : var(--dark-color);
+  transition: all 100ms ease-in-out;
+}
+
+footer a:hover {
+  background: var(--dark-color);
+  color: var(--light-color);
+  padding: 6px
+}
 
 
-@media (max-width: 700px) {
+
+@media screen and (max-width: 767px) {
 
   body {
     margin: 0 auto;
@@ -220,11 +239,6 @@ hr {
 .album {
   font-size: 10px;
 }
-
- iframe .audio{
-display: none;
- }
-
  
  .front-dummy, .back-dummy {
   margin: 50px auto;
@@ -237,7 +251,7 @@ display: none;
 
  .chose,
 .nik {
-  font-size: 30px;
+  font-size: 25px;
   margin: 10px;
 }
 
@@ -314,4 +328,9 @@ margin: 0px auto;
   padding-left: 100px
   }
 
+
+  footer {
+    font-size: 10px;
+  }
 }
+
